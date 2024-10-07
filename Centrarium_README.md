@@ -41,14 +41,15 @@ If your site already uses Jekyll, follow these steps:
 3. Copy the contents of the `_config.yml` from this project in to yours, and update the necessary information.
 
 Don't forget to install Jekyll and other dependencies:
-```bash
+
+{% highlight bash %}
 # cd into project directory
 cd centrarium
 # install Bundler if you don't have it already
 gem install bundler
 # install jekyll, jekyll-archives, jekyll-sitemap, and jekyll-paginate
 bundle install
-```
+{% endhighlight %}
 
 ## Updating Styles
 
@@ -98,7 +99,7 @@ Although this theme comes with a combined, categorized archive (see `posts.html`
 
 To change archive settings, see the __jekyll-archives__ section of `_config.yml`:
 
-```yml
+{% highlight yaml %}
 jekyll-archives:
   enabled:
     - categories
@@ -107,7 +108,7 @@ jekyll-archives:
   permalinks:
     category: '/category/:name/'
     tag: '/tag/:name/'
-```
+{% endhighlight %}
 
 To fully disable the archive, remove the __jekyll-archives__ section AND remove it from the __gems__ list.
 
@@ -117,9 +118,10 @@ A sitemap is also generated using [jekyll-sitemap][sitemap].
 
 ### Syntax Highlighting Settings
 
-Inside of a post, you can enable syntax highlighting with the `{% highlight <language> %}` Liquid tag. For example:
+Inside of a post, you can enable syntax highlighting with the `{% raw %}{% highlight <language> %}{% endraw %}` Liquid tag. For example:
 
-```
+{% highlight liquid %}
+{% raw %}
 {% highlight javascript %}
 function demo(string, times) {
   for (var i = 0; i < times; i++) {
@@ -128,13 +130,14 @@ function demo(string, times) {
 }
 demo("hello, world!", 10);
 {% endhighlight %}
-```
+{% endraw %}
+{% endhighlight %}
 
 You can change the [HighlightJS theme][highlightjs_theme] in `_config.yml`:
 
-```yml
+{% highlight yaml %}
 highlightjs_theme: "monokai_sublime"
-```
+{% endhighlight %}
 
 ### Disqus Settings
 
@@ -154,7 +157,7 @@ You can enable basic [Google Analytics][ga] pageview tracking by including your 
 
 Your personal social network settings are combined with the social sharing options. In the __social__ section of `_config.yml`, include an entry for each network you want to include. For example:
 
-```yml
+{% highlight yaml %}
 social:
   - name: Twitter                         # Name of the service
     icon: twitter                         # Font Awesome icon to use (minus fa- prefix)
@@ -162,7 +165,7 @@ social:
     url: https://twitter.com/TheBenCentra # URL of your profile (leave blank to not display in footer)
     desc: Follow me on Twitter            # Description to display as link title, etc
     share: true                           # Include in the "Share" section of posts
-```
+{% endhighlight %}
 
 ### Social Protocols
 
@@ -174,18 +177,18 @@ Also there is another protocol, the Open Source protocol, for saying where your 
 
 You can enhance the `posts.html` archive page with descriptions of your post categories. See the __descriptions__ section of `_config.yml`:
 
-```yml
+{% highlight yaml %}
 # Category descriptions (for archive pages)
 descriptions:
   - cat: jekyll
     desc: "Posts describing Jekyll setup techniques."
-```
+{% endhighlight %}
 
 ### Custom Page-Specific Javascript
 
 You can add page-specific javascript files by adding them to the top-level `/js` directory and including the filename in the __custom_js__ page's configuration file:
 
-```yml
+{% highlight yaml %}
 # Custom js (for individual pages)
 ---
 layout: post
@@ -197,14 +200,14 @@ custom_js:
 - Popmotion
 - Vue
 ---
-```
+{% endhighlight %}
 
 The `/js/` directory would contain the corresponding files:
 
-```bash
+{% highlight bash %}
 $ ls js/
 Popmotion.js Vue.js
-```
+{% endhighlight %}
 
 ## Contributing
 
