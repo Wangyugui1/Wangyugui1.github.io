@@ -6,16 +6,16 @@ plugins:
   - jekyll-sitemap
 
 # Site settings
-title: '<小笨站>'
-subtitle: '<人生苦短，留下纪念>'
-email: '<2472453280@qq.com>'
-name: '<Yugui Wang>'
-description: '<记录大学四年的学习和生活>'
+title: '小笨站'
+subtitle: '人生苦短，留下纪念'
+email: '2472453280@qq.com'
+name: 'Yugui Wang'
+description: '记录大学四年的学习和生活'
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: '<https://blog.yuguiwang.me>' # the base hostname & protocol for your site
+url: 'https://blog.yuguiwang.me' # the base hostname & protocol for your site
 cover: "/assets/header_image.jpg"
 logo: "/assets/logo.png"
 
